@@ -1,0 +1,20 @@
+if __name__ == '__main__':
+    N = int(input())
+    lst = []
+    for _ in range(N):
+        command, *values = input().split()
+        values = list(map(int, values))
+        if command == 'print':
+            print(lst)
+        elif command == 'insert':
+            lst.insert(*values)
+        elif command == 'remove':
+            lst.remove(*values)
+        elif command == 'append':
+            lst.append(*values)
+        elif command == 'sort':
+            lst.sort()
+        elif command == 'pop':
+            lst.pop()
+        elif command == 'reverse':
+            lst.reverse()
